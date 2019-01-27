@@ -5,19 +5,14 @@
     <title>Camel Up</title>
 </head>
 <body>
-<button onclick="display()">Roll</button>
+<button onclick="display(colours)">Roll</button>
 <div id="placeholder"></div>
 <script>
-  // helper functions
-  function cloneArray(arr) {
-    return arr.slice(0);
-  }
-
   function randNumber(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
-
-  function display() {
+    
+  function display(colours) {
     const elem = document.createElement('h1');
     const placeHolder = document.querySelector('#placeholder');
 
@@ -32,14 +27,13 @@
     colours.splice(randColourNum, 1);
   }
 
-  const benchColours = [
+  const colours = [
     'mediumseagreen',
     'darkorange',
     'white',
     'dodgerblue',
     'gold'
   ];
-  let colours = cloneArray(benchColours);
 </script>
 </body>
 </html>
